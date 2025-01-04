@@ -3,13 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.LockWidget"
+        android:label="Lock Widget"
         tools:ignore="MissingApplicationIcon">
-        <activity
-            android:name=".LockActivity"
-            android:exported="false" />
 
         <receiver
             android:name=".LockWidget"
@@ -22,6 +17,12 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/lock_widget_info" />
         </receiver>
+
+        <receiver
+            android:name=".LockClickHandler"
+            android:enabled="true"
+            android:exported="false" />
+
     </application>
 
 </manifest>
