@@ -4,12 +4,14 @@ plugins {
 
 android {
     namespace = "uvnesh.lockwidget"
-    compileSdk = 35
+    //noinspection GradleDependency
+    compileSdk = 30
 
     defaultConfig {
         applicationId = "uvnesh.lockwidget"
-        minSdk = 33
-        targetSdk = 35
+        minSdk = 30
+        //noinspection ExpiredTargetSdkVersion
+        targetSdk = 30
         versionCode = 1
         versionName = "1.0"
     }
