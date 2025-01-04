@@ -14,6 +14,15 @@ android {
         versionName = "1.0"
     }
 
+    applicationVariants.all {
+        val variant = this
+        variant.outputs.map { it as com.android.build.gradle.internal.api.BaseVariantOutputImpl }
+            .forEach { output ->
+                val outputFileName = "LockWidget.apk"
+                output.outputFileName = outputFileName
+            }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = true
